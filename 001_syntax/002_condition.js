@@ -6,7 +6,15 @@
  *
  */
 function printMessageByAge(age) {
+  if ( age >= 20 ) {
+    //return "20以上";
+    console.log("20以上");}
+  else {
+  console.log("未成年です。");
+  } 
 }
+printMessageByAge(20)
+//20以上
 
 /**
  *  2.2 引数から与えられた時間が
@@ -17,7 +25,18 @@ function printMessageByAge(age) {
  *
  */
 function greeding(hour) {
+  if(hour < 11){
+    console.log("Good Morning");
+  }
+  else if (hour < 16){
+    console.log("Hello");
+  }
+  else{
+    console.log("Good Night");
+  }
 }
+greeding(6)
+//Good Morning
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を返却するメソッドを実装してください
@@ -33,7 +52,25 @@ function greeding(hour) {
  */
 
 function getDay(day) {
+  if(day===0){
+    console.log("Sunday")
+  }else if(day===1){
+    console.log("Monday")
+  }else if(day===2){
+    console.log("Tuesday")
+  }else if(day===3){
+    console.log("Wednesday")
+  }else if(day===4){
+    console.log("Thursday")
+  }else if(day===5){
+    console.log("Friday")
+  }else if(day===6){
+    console.log("Saturday")
+  }
 }
+getDay(0)
+//Sunday
+
 
 module.exports = {
   printMessageByAge,

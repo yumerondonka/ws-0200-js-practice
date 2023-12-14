@@ -3,17 +3,39 @@
  *
  */
 
+/*0
 function printOneToTen() {
   console.log([0,1,2,3,4,5,6,7,8,9,10])
 }
-printOneToTen()
+//printOneToTen()
 //(11) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ */
+
+//for文で
+function sum() {
+  for (let i = 0; i < 11 ; i++) {
+    console.log(i);
+  }
+}
+//sum()
+/*0
+VM275:3 1
+VM275:3 2
+VM275:3 3
+VM275:3 4
+VM275:3 5
+VM275:3 6
+VM275:3 7
+VM275:3 8
+VM275:3 9
+VM275:3 10 */
 
 
 /**
  *  3.2 0~10までの数字を数字の大きい順に表示するメソッドを実装してください
  * */
 
+/*
 function printOneToTenDesc(x,y) {
   return y - x;
 }
@@ -21,6 +43,17 @@ var num = [0,1,2,3,4,5,6,7,8,9,10];
 num.sort(printOneToTenDesc);
 console.log(num);
 //(11) [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+*/
+
+//for文で　
+function printOneToTenDesc(){
+  for (let i = 10; i>=0 ; i--) {
+    console.log(i);
+}}
+printOneToTenDesc();
+//0
+
+
 
 /**
  *  3.3 while文を使って0~10までの数字を小さい順番に表示するメソッドを実装してください
@@ -33,7 +66,7 @@ function printOneToTenWhile(count) {
     count++;
   }
 }
-printOneToTenWhile(0)
+//printOneToTenWhile(0)
 /*
 printOneToTenWhile(0)
 VM282:3 0
@@ -55,6 +88,15 @@ VM282:3 10
  */
 
 function printOneToTenWhileDesc(count) {
+  while(count >= 0) {
+    console.log(count)
+    count--;
+  }
+  }
+printOneToTenWhileDesc(10)
+
+/*
+function printOneToTenWhileDesc(count) {
   while(count<=10){
     if(count<=0){//
       break;//while文を強制終了する。
@@ -63,9 +105,8 @@ function printOneToTenWhileDesc(count) {
     count--;
   }
 }
-printOneToTenWhileDesc(10)
-/*
-printOneToTenWhileDesc(10)
+//printOneToTenWhileDesc(10)
+
 VM318:6 10
 VM318:6 9
 VM318:6 8

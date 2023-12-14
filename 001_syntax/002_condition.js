@@ -8,13 +8,13 @@
 function printMessageByAge(age) {
   if ( age >= 20 ) {
     //return "20以上";
-    console.log("20以上");}
+    console.log("成年です。");}
   else {
   console.log("未成年です。");
   } 
 }
-printMessageByAge(20)
-//20以上
+//printMessageByAge(20)
+//成年です。
 
 /**
  *  2.2 引数から与えられた時間が
@@ -25,17 +25,17 @@ printMessageByAge(20)
  *
  */
 function greeding(hour) {
-  if(hour < 11){
+  if(hour < 12){
     console.log("Good Morning");
   }
-  else if (hour < 16){
+  else if (hour < 17){
     console.log("Hello");
   }
   else{
     console.log("Good Night");
   }
 }
-greeding(6)
+//greeding(6)
 //Good Morning
 
 /**
@@ -68,8 +68,60 @@ function getDay(day) {
     console.log("Saturday")
   }
 }
-getDay(0)
+//getDay(0)
 //Sunday
+
+//switchの場合
+function getDay(day) {
+  switch (day) {
+    case 0:
+      console.log("Sunday");
+    case 1:
+      console.log("Monday");
+    case 2:
+      console.log("Tuesday");
+    case 3:
+      console.log("Wednesday");
+    case 4:
+      console.log("Thursday");
+    case 5:
+      console.log("Friday");
+    case 6:
+      console.log("Saturday");
+    break;
+  }
+}
+//getDay(0)
+/*
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+ */
+
+/*
+const day = 0
+switch(day){
+  case 0:
+    console.log("Sunday");
+  case 1:
+    console.log("Monday");
+  case 2:
+    console.log("Tuesday");
+  case 3:
+    console.log("Wednesday");
+  case 4:
+    console.log("Thursday");
+  case 5:
+    console.log("Friday");
+  case 6:
+    console.log("Saturday");
+  break;
+}
+ */
 
 
 module.exports = {

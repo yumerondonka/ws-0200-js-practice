@@ -5,19 +5,26 @@
 function helloWorld() {
   console.log("helloWorld")
 }
-helloWorld()
+//helloWorld()
 //helloWorld
 
 /**
  *  1.2 const を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
  *
- */
+
 function displayConst(ho) {
   return ho;
 }
 const hogo = displayConst("hoge")
 console.log(hogo);
 //hoge
+*/
+
+function displayConst() {
+  const ho = "hoge";
+  console.log(ho);
+}
+//displayConst()
 
 
 //めもですーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
@@ -41,13 +48,20 @@ console.log(message); // コンソールには「こんにちは、杉田さん�
 /**
  *  1.3 let を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
  *
- */
+
 function displayLet(ho) {
     return ho;
 }
   let hog = displayLet("hoge")
   console.log(hog);
 //hoge
+*/
+
+function displayLet() {
+  let hog = "hoge";
+  console.log(hog)
+}
+//displayLet()
 
 
 
@@ -75,10 +89,10 @@ console.log(addPrefix("")); // => "カスタム:文字列"
  *  1.4 引数に渡した変数を表示するメソッドを実装してください
  *
  */
-function displayArgument(arg = "チキン") {
+function displayArgument(arg) {
   return arg;
 }
-displayArgument()
+//displayArgument()
 //'チキン'
 
 
@@ -89,7 +103,7 @@ displayArgument()
 function sumTwoArgs(a, b) {
   return a + b ;
 }
-sumTwoArgs(1,2);
+//sumTwoArgs(1,2);
 //3
 
 /**
@@ -99,7 +113,7 @@ sumTwoArgs(1,2);
 function subtractTwoArgs(a, b) {
   return a - b ;
 }
-subtractTwoArgs(7,2);
+//subtractTwoArgs(7,2);
 //5
 
 /**
@@ -107,9 +121,15 @@ subtractTwoArgs(7,2);
  *
  */
 function quotientTwoArgs(a, b) {
+  if(b===0){
+    return null
+  }else if(a===0){
+    return null
+  } else{
   return a / b ;
+  }
 }
-quotientTwoArgs(49,7);
+//quotientTwoArgs(49,7);
 //7
 
 /**
@@ -119,7 +139,7 @@ quotientTwoArgs(49,7);
 function productTwoArgs(a, b) {
   return a * b ;
 }
-productTwoArgs(7,7);
+//productTwoArgs(7,7);
 //49
 
 /**
@@ -129,7 +149,7 @@ productTwoArgs(7,7);
 function remainderTwoArgs(a) {
   return a % 2 ;
 }
-remainderTwoArgs(7)
+//remainderTwoArgs(7)
 //1
 
 /**
@@ -138,12 +158,12 @@ remainderTwoArgs(7)
  */
 function isEven(a) {
   if ( a % 2 === 0) {
-    return "2の倍数です";
+    return true;
   } 
-  return "2の倍数ではない";
+  return false;
 }
-isEven(7)
-//'2の倍数ではない'
+//isEven(7)
+//false
 
 
 /**
@@ -153,7 +173,7 @@ isEven(7)
 function concatString(a, b) {
   return a + b;
 }
-concatString("内田","さん")
+//concatString("内田","さん")
 //'内田さん'
 
 

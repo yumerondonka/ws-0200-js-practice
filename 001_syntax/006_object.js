@@ -8,7 +8,16 @@
  */
 
 function getPersonObject() {
+  const get ={
+    name: 'Bob',
+    age: 32,
+    gender: 'male'
+  }
+  return get
 }
+//console.log(getPersonObject())
+//{name: 'Bob', age: 32, gender: 'male'}
+//最下行 getPersonObject()でも同じ結果
 
 /**
  *  6.2 下記データAが引数で与えられた場合にデータBに書き換える関数を実装してください。
@@ -23,9 +32,23 @@ function getPersonObject() {
  *    gender: 'female'
  *
  */
-
-function mutateObject(person) {
+const da ={
+  name: 'Bob',
+  age: 32,
+  gender: 'male'
+} 
+const db ={
+  name: 'Mary',
+  age: 37,
+  gender: 'female'
 }
+function mutateObject(person) {
+  if(person===da){
+    console.log(db)
+  }
+}
+mutateObject(da)
+//{name: 'Mary', age: 37, gender: 'female'}
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
